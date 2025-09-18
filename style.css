@@ -352,3 +352,22 @@ nav a:hover {
 .partnership-item {
     background: #ecf0f1;
     padding: 20
+    /* Blog Page Styles */
+.blog-post h2 {
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+.blog-post h3 {
+    text-align: left;
+}
+
+.blog-post h3::after {
+    margin: 10px 0 0;
+}
+
+.post-meta {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 2em;
+}
