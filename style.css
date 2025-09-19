@@ -24,8 +24,17 @@ header {
 }
 
 header img {
-  height: 50px;
+  height: 80px;              /* Larger logo */
+  max-height: 100px;         /* Prevents it from overpowering */
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)); /* Glow for visibility */
+  transition: transform 0.3s ease;
 }
+
+header img:hover {
+  transform: scale(1.05);    /* Subtle hover zoom */
+}
+
 
 nav ul {
   list-style: none;
