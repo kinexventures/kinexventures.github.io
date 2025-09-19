@@ -18,12 +18,12 @@ Official website for Kinex Ventures - a technology and creative services company
 - Event Equipment & Technology
 
 ## Contact
-- 📧 Email: kinexventures@protonmail.com
+- 📧 Email: kinexventure@protonmail.com
 - 🌐 Website: https://kinexventures.github.io
-- 📱 Phone: [Your Business Number]
+- 📱 Phone: 313-542-4207
 
 ---
 
 *Innovation Through Connection*
 
-© 2024 Kinex Ventures. Licensed under MIT License.
+© 2025 Kinex Ventures. Licensed under MIT License.
