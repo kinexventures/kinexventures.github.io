@@ -1,36 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kinex Ventures</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Kinex Ventures | Technology Solutions & Community Impact | Wayne, Michigan</title>
+    <meta name="description" content="Kinex Ventures provides IT & Cybersecurity Consulting, Game Development, Educational Technology, and Community Programs in Wayne, Michigan. Expert technology solutions with community impact.">
+    <meta name="keywords" content="IT services Wayne Michigan, cybersecurity consulting, game development, educational technology, community programs, technology solutions Detroit">
+    <meta name="author" content="Kinex Ventures">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Local SEO -->
+    <meta name="geo.region" content="US-MI">
+    <meta name="geo.placename" content="Wayne, Michigan">
+    <meta name="geo.position" content="42.2814;-83.3863">
+    <meta name="ICBM" content="42.2814, -83.3863">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Kinex Ventures | Technology Solutions & Community Impact">
+    <meta property="og:description" content="Multi-industry technology company providing IT services, game development, educational technology, and community programs in Wayne, Michigan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kinexventures.github.io">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:site_name" content="Kinex Ventures">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kinex Ventures | Technology Solutions & Community Impact">
+    <meta name="twitter:description" content="Expert technology solutions across IT, gaming, education, and community programs in Wayne, Michigan.">
+    <meta name="twitter:image" content="logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kinexventures.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechnologyCompany",
+        "name": "Kinex Ventures",
+        "description": "Multi-industry technology company providing IT services, cybersecurity, game development, educational technology, and community programs.",
+        "url": "https://kinexventures.github.io",
+        "logo": "logo.png",
+        "foundingDate": "2025",
+        "founder": {
+            "@type": "Person",
+            "name": "Kinex Ventures Founder"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Wayne",
+            "addressRegion": "MI",
+            "postalCode": "",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+        },
+        "sameAs": [
+            "https://linkedin.com/company/kinex-ventures",
+            "https://twitter.com/kinexventures"
+        ],
+        "service": [
+            {
+                "@type": "Service",
+                "name": "IT Services & Cybersecurity",
+                "description": "Professional IT support, cybersecurity consulting, and technology training services."
+            },
+            {
+                "@type": "Service", 
+                "name": "Game Development",
+                "description": "MMORPG development, interactive media creation, and gaming infrastructure services."
+            },
+            {
+                "@type": "Service",
+                "name": "Educational Technology",
+                "description": "Safe virtual learning environments and educational software development for children."
+            },
+            {
+                "@type": "Service",
+                "name": "Community Programs",
+                "description": "LJ's Crew community outreach, family support, and local charity partnerships."
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Additional Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kinex Ventures",
+        "image": "logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Wayne",
+            "addressRegion": "MI",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "42.2814",
+            "longitude": "-83.3863"
+        },
+        "url": "https://kinexventures.github.io",
+        "telephone": "",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "42.2814",
+                "longitude": "-83.3863"
+            },
+            "geoRadius": "50"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
 </head>
+
 <body>
-  <header>
-    <img src="logo.png" alt="Kinex Ventures Logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <img src="logo.png" alt="Kinex Ventures Logo - Technology Solutions & Community Impact">
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Welcome to Kinex Ventures</h1>
-    <p>Innovating, connecting, and shaping the future together.</p>
-    <a href="services.html" class="btn">Explore Services</a>
-  </section>
+    <main>
+        <section class="hero">
+            <h1>Kinex Ventures: Technology Solutions with Community Impact</h1>
+            <p>Multi-industry innovation lab providing IT services, cybersecurity, game development, educational technology, and community programs in Wayne, Michigan.</p>
+            <a href="services.html" class="btn" role="button" aria-label="Explore our technology services">Explore Services</a>
+        </section>
 
-  <footer>
-    <p>© 2025 Kinex Ventures. All rights reserved.</p>
-  </footer>
+        <section class="section" id="about">
+            <h2>Why Choose Kinex Ventures?</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Professional Technology Services</h3>
+                    <p>Expert IT support, cybersecurity consulting, and technology training for businesses across Michigan.</p>
+                </div>
+                <div class="card">
+                    <h3>Innovative Development</h3>
+                    <p>Game development, educational software, and interactive media creation with cutting-edge technology.</p>
+                </div>
+                <div class="card">
+                    <h3>Community-Focused Impact</h3>
+                    <p>Every project contributes to positive community change through our LJ's Crew program.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="services-preview">
+            <h2>Our Core Services</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Kinex Tech Solutions</h3>
+                    <p>Cybersecurity consulting, IT support, system administration, and technology training for businesses.</p>
+                    <a href="services.html#tech-services" class="btn" style="margin-top: 1rem;">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Gaming & Interactive Media</h3>
+                    <p>WorldweaveMMO development, QA testing, gaming infrastructure, and interactive virtual worlds.</p>
+                    <a href="services.html#gaming-services" class="btn" style="margin-top: 1rem;">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Wonder Labs Kids</h3>
+                    <p>Safe educational technology for children ages 3-6, with virtual learning environments and skill development.</p>
+                    <a href="services.html#education-services" class="btn" style="margin-top: 1rem;">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2025 Kinex Ventures. All rights reserved. | Wayne, Michigan Technology Solutions</p>
+            <p>Serving Detroit Metro Area | IT Services, Cybersecurity, Game Development, Educational Technology</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    
+    <!-- Google Analytics (when ready) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
 </body>
-</html>
 
+</html>
