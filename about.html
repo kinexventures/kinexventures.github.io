@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Kinex Ventures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #64b5f6;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .page-header {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #1e293b, #334155);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .content-card h3 {
+            color: #64b5f6;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .content-card p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .mission-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #334155, #475569);
+            text-align: center;
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #64b5f6;
+        }
+
+        .mission-statement {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: #e2e8f0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .value-item h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .timeline-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .timeline-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #64b5f6;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            text-align: left;
+            padding-left: 3rem;
+            margin-left: 50%;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-date {
+            color: #64b5f6;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 4rem !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                text-align: left !important;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">⚡ Kinex Ventures</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>About Kinex Ventures</h1>
+                <p>Building the better world we want to live in with our children through authentic innovation and
+                    meaningful technology</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Our Story</h3>
+                        <p>Kinex Ventures was born from a simple but powerful realization: I'm not just working towards
+                            building an empire - I'm working towards building the better world I want to not just dream
+                            about but live in with my children.</p>
+
+                        <p>As a single father who experienced profound personal transformation starting in 2020, I
+                            understand that real innovation comes from authentic stakes. Every project we develop, every
+                            service we provide, and every community program we plan serves one ultimate mission:
+                            creating systematic solutions that help children reach their full potential.</p>
+
+                        <p>Our approach combines cutting-edge technology with genuine human understanding, because we
+                            believe the best solutions come from people who have real skin in the game.</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>What Makes Us Different</h3>
+                        <p>We're not another tech company chasing trends. We're a mission-driven ecosystem where each
+                            venture strengthens the others, creating sustainable impact that scales globally while
+                            remaining rooted in authentic personal purpose.</p>
+
+                        <p>Our founder's journey through challenges - including time in jail and complex relationship
+                            dynamics - sparked a conscious decision to become the person his daughters deserve. That
+                            transformation isn't just backstory; it's the foundation of authentic leadership that
+                            refuses to accept systemic limitations on children's potential.</p>
+
+                        <p>Every line of code, every business decision, and every community program serves our core
+                            mission: proving that technology built with genuine stakes creates revolutionary outcomes
+                            for humanity's most important investment - our children.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <h2>Our Mission</h2>
+                    <div class="mission-statement">
+                        "To create an integrated ecosystem of technology solutions that accelerate children's cognitive,
+                        emotional, and physical development while building sustainable businesses that fund continued
+                        innovation and community impact."
+                    </div>
+
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h4>🎯 Authentic Innovation</h4>
+                            <p>Technology solutions born from real experience and genuine need, not market trends.</p>
+                        </div>
+
+                        <div class="value-item">
+                            <h4>👨‍👧‍👧 Family-First Purpose</h4>
+                            <p>Every decision filtered through one question: "Does this build a better world for our
+                                children?"</p>
+                        </div>
+
+                        <div class="value-item">
+                            <h4>🔄 Sustainable Growth</h4>
+                            <p>Building businesses that fund continued innovation while creating meaningful employment
+                                and community impact.</p>
+                        </div>
+
+                        <div class="value-item">
+                            <h4>🤝 Collaborative Ecosystem</h4>
+                            <p>Each venture strengthens the others, creating synergies that multiply positive outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="container">
+                <h2>Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020</div>
+                            <div class="timeline-title">Personal Transformation</div>
+                            <div class="timeline-description">Conscious decision to become the person my daughters
+                                deserve, sparking the vision for systematic change.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023</div>
+                            <div class="timeline-title">Technical Foundation</div>
+                            <div class="timeline-description">Built expertise in IT consulting, cybersecurity, and
+                                technology education - establishing revenue streams.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-title">Gaming Innovation</div>
+                            <div class="timeline-description">Began development of WorldweaveMMO and educational gaming
+                                platforms focused on emotional intelligence.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025</div>
+                            <div class="timeline-title">Ecosystem Launch</div>
+                            <div class="timeline-description">NSF grant application submitted, business diversification
+                                across events and consulting, LJ's Crew program development.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Future</div>
+                            <div class="timeline-title">Global Impact</div>
+                            <div class="timeline-description">Scaling integrated child development platform to serve
+                                millions while maintaining authentic mission focus.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kinex Ventures. Building tomorrow's humanity through authentic technology innovation.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

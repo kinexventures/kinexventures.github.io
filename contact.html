@@ -1,480 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Contact Kinex Ventures | IT Services & Technology Solutions | Wayne, Michigan</title>
-    <meta name="description" content="Contact Kinex Ventures for IT services, cybersecurity consulting, game development, and community programs in Wayne, Michigan. Get expert technology solutions today.">
-    <meta name="keywords" content="contact IT services Wayne Michigan, cybersecurity consultation, technology support Detroit, game development services, educational technology">
-    <meta name="author" content="Kinex Ventures">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Local SEO -->
-    <meta name="geo.region" content="US-MI">
-    <meta name="geo.placename" content="Wayne, Michigan">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Contact Kinex Ventures | Technology Solutions Wayne Michigan">
-    <meta property="og:description" content="Get in touch with Kinex Ventures for professional IT services, cybersecurity, game development, and community programs.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kinexventures.com/contact.html">
-    <meta property="og:image" content="https://kinexventures.com/logo.png">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Contact Kinex Ventures | Technology Solutions">
-    <meta name="twitter:description" content="Professional IT services, cybersecurity, and technology solutions in Wayne, Michigan.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kinexventures.com/contact.html">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: https: https://formspree.io;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact Kinex Ventures",
-        "description": "Contact information and form for Kinex Ventures technology services",
-        "url": "https://kinexventures.com/contact.html",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "Kinex Ventures",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "availableLanguage": "English",
-                "areaServed": "Michigan"
-            }
-        }
-    }
-    </script>
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Contact - Kinex Ventures</title>
     <style>
-        /* Contact-specific styles */
-        .contact-form {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #64b5f6;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .page-header {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
             max-width: 600px;
             margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        
+
+        .contact-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1e293b, #334155);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-info h3 {
+            color: #64b5f6;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: #e2e8f0;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .contact-details a {
+            color: #64b5f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: #42a5f5;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-form h3 {
+            color: #64b5f6;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #333;
+            color: #e2e8f0;
+            font-weight: 500;
         }
-        
+
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e9ecef;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            color: #e2e8f0;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #3a0ca3;
-            box-shadow: 0 0 0 3px rgba(58, 12, 163, 0.1);
+            border-color: #64b5f6;
+            box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.2);
         }
-        
-        .required {
-            color: #e74c3c;
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
         }
-        
-        .error-message {
-            color: #e74c3c;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
+
+        .submit-button {
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
         }
-        
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            display: none;
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.4);
         }
-        
-        .contact-info {
-            background: #f8f9fc;
-            padding: 2rem;
-            border-radius: 12px;
+
+        .location-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #334155, #475569);
+            text-align: center;
+        }
+
+        .location-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .location-content h2 {
+            font-size: 2.5rem;
             margin-bottom: 2rem;
+            color: #64b5f6;
         }
-        
-        .contact-methods {
+
+        .location-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 2rem;
+            margin-top: 3rem;
         }
-        
-        .contact-method {
+
+        .location-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .location-item h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .location-item p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .availability-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .availability-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
-        .contact-method h4 {
-            color: #3a0ca3;
-            margin-bottom: 0.5rem;
+
+        .availability-item h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
-        
-        .honeypot {
-            position: absolute !important;
-            left: -9999px !important;
-            width: 1px !important;
-            height: 1px !important;
-            overflow: hidden !important;
+
+        .availability-item p {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .availability-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .availability-status.available {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: white;
+        }
+
+        .availability-status.limited {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+        }
+
+        .availability-status.developing {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .location-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .availability-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
         }
     </style>
 </head>
-
 <body>
     <header>
-        <img src="logo.png" alt="Kinex Ventures Logo - Technology Solutions & Community Impact">
-        <nav role="navigation" aria-label="Main navigation">
-            <ul>
+        <nav class="container">
+            <div class="logo">⚡ Kinex Ventures</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="section">
-            <h1>Contact Kinex Ventures</h1>
-            <p>Ready to transform your business with expert technology solutions? We'd love to hear from you and discuss how we can help achieve your goals.</p>
-            
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <h2>Get In Touch</h2>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <h4>📧 Email</h4>
-                        <p><a href="kinexventure@protonmail.com">kinexventure@protonmail.com</a></p>
-                        <p><em>Response within 24 hours</em></p>
+        <section class="page-header">
+            <div class="container">
+                <h1>Let's Build the Future Together</h1>
+                <p>Ready to start a conversation about technology, innovation, or creating the better world we want our children to inherit?</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h4>Business Inquiries</h4>
+                                    <p><a href="mailto:kinnexventure@protonmail.com">kinnexventure@protonmail.com</a></p>
+                                    <p>For partnerships, investments, consulting, and collaboration opportunities</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h4>Direct Phone</h4>
+                                    <p><a href="tel:313-542-4207">313-542-4207</a></p>
+                                    <p>Available for urgent inquiries and scheduled consultations</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💼</div>
+                                <div class="contact-details">
+                                    <h4>Professional Network</h4>
+                                    <p>LinkedIn: Connect for authentic entrepreneurship discussions</p>
+                                    <p>Industry networking and business development conversations</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💙</div>
+                                <div class="contact-details">
+                                    <h4>Community Impact</h4>
+                                    <p>LJ's Crew Community Outreach (In Development)</p>
+                                    <p>Local partnerships and community collaboration opportunities</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-method">
-                        <h4>📞 Phone</h4>
-                        <p><a href="tel:(313)-542-4207">(313) 542-4207</a></p>
-                        <p><em>Business hours: 9 AM - 5 PM EST</em></p>
-                    </div>
-                    <div class="contact-method">
-                        <h4>📍 Location</h4>
-                        <p>Wayne, Michigan</p>
-                        <p><em>Serving Detroit Metro Area!</em></p>
-                    </div>
-                    <div class="contact-method">
-                        <h4>⚡ Emergency IT Support</h4>
-                        <p><a href="tel:(313)542-4207">(313) 542-4207</a></p>
-                        <p><em>24/7 for existing clients</em></p>
+
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required minlength="2" maxlength="100">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiry-type">Inquiry Type</label>
+                                <select id="inquiry-type" name="inquiry-type">
+                                    <option value="">Select inquiry type...</option>
+                                    <option value="it-services">IT Services & Tech Support</option>
+                                    <option value="party-rentals">Event & Party Rentals</option>
+                                    <option value="cannabis-consulting">Cannabis Industry Consulting</option>
+                                    <option value="gaming-development">Gaming & Development Projects</option>
+                                    <option value="investment">Investment & Partnership</option>
+                                    <option value="community">Community & LJ's Crew</option>
+                                    <option value="media">Media & Speaking</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company" maxlength="200">
+                            </div>
+
+                            <!-- Honeypot spam protection -->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Tell me about your project, question, or how we might work together..." required minlength="10" maxlength="2000"></textarea>
+                            </div>
+
+                            <input type="hidden" name="_subject" value="New Kinex Ventures Contact Form Submission">
+                            <input type="hidden" name="_next" value="https://kinexventures.github.io/contact.html?success=true">
+
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
-            
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <div class="success-message" id="successMessage">
-                    Thank you for your message! We'll get back to you within 24 hours.
+        </section>
+
+        <section class="location-section">
+            <div class="container">
+                <div class="location-content">
+                    <h2>Where We're Located</h2>
+                    <p>Based in Wayne County, Michigan, we serve clients locally and globally while maintaining strong roots in our community.</p>
+                    
+                    <div class="location-info">
+                        <div class="location-item">
+                            <h4>🏠 Primary Location</h4>
+                            <p>Wayne County, Michigan<br>
+                            Local service area with deep community connections and understanding of regional business landscape.</p>
+                        </div>
+                        
+                        <div class="location-item">
+                            <h4>🌐 Service Areas</h4>
+                            <p>Local: Southeast Michigan<br>
+                            Remote: Nationwide consulting and development services available.</p>
+                        </div>
+                        
+                        <div class="location-item">
+                            <h4>⚡ Response Time</h4>
+                            <p>Email: Within 24 hours<br>
+                            Phone: Same-day for urgent inquiries<br>
+                            Meetings: Flexible scheduling available</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <form id="contactForm" action="#" method="POST" novalidate>
-                    <!-- CSRF Token (you'll need to generate this server-side) -->
-                    <input type="hidden" name="csrf_token" value="CSRF_TOKEN_HERE">
-                    
-                    <!-- Honeypot for spam protection -->
-                    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required maxlength="100" autocomplete="name">
-                        <div class="error-message" id="nameError">Please enter your full name</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required maxlength="255" autocomplete="email">
-                        <div class="error-message" id="emailError">Please enter a valid email address</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" maxlength="20" autocomplete="tel">
-                        <div class="error-message" id="phoneError">Please enter a valid phone number</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company/Organization</label>
-                        <input type="text" id="company" name="company" maxlength="100" autocomplete="organization">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service Interest <span class="required">*</span></label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="kinex-tech">Kinex Tech Solutions (IT/Cybersecurity)</option>
-                            <option value="gaming">Gaming & Interactive Media</option>
-                            <option value="education">Wonder Labs Kids (Educational Technology)</option>
-                            <option value="events">Plum Party Rentals (Event Services)</option>
-                            <option value="cannabis">Cannabis Industry Consulting</option>
-                            <option value="community">LJ's Crew Community Programs</option>
-                            <option value="multiple">Multiple Services</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <div class="error-message" id="serviceError">Please select a service</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="urgency">Project Urgency</label>
-                        <select id="urgency" name="urgency">
-                            <option value="">Select urgency...</option>
-                            <option value="asap">ASAP (Emergency)</option>
-                            <option value="1-week">Within 1 week</option>
-                            <option value="1-month">Within 1 month</option>
-                            <option value="3-months">Within 3 months</option>
-                            <option value="planning">Just planning/exploring</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="6" required maxlength="2000" placeholder="Please describe your project, needs, or questions in detail..."></textarea>
-                        <div class="error-message" id="messageError">Please enter your message</div>
-                        <small style="color: #666;">Characters remaining: <span id="charCount">2000</span></small>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-                            Subscribe to our newsletter for technology tips and company updates
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn" id="submitBtn">
-                        <span id="submitText">Send Message</span>
-                        <span id="submitLoading" style="display: none;">Sending...</span>
-                    </button>
-                </form>
             </div>
-            
-            <!-- FAQ Section -->
-            <section class="faq-section" style="margin-top: 3rem;">
-                <h2>Frequently Asked Questions</h2>
-                <div class="card-grid">
-                    <div class="card">
-                        <h3>How quickly do you respond?</h3>
-                        <p>We respond to all inquiries within 24 hours during business days. Emergency IT support is available 24/7 for existing clients.</p>
+        </section>
+
+        <section class="availability-section">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #64b5f6;">Current Availability</h2>
+                <div class="availability-grid">
+                    <div class="availability-item">
+                        <h4>🔧 IT Services & Consulting</h4>
+                        <p>Active revenue stream with immediate availability for new clients. Cybersecurity, tech support, and training services.</p>
+                        <span class="availability-status available">Taking New Clients</span>
                     </div>
-                    <div class="card">
-                        <h3>Do you offer free consultations?</h3>
-                        <p>Yes! We provide free initial consultations to understand your needs and determine how we can best help your business.</p>
+
+                    <div class="availability-item">
+                        <h4>🌿 Cannabis Consulting</h4>
+                        <p>Industry expertise available for licensing, compliance, and business development consulting projects.</p>
+                        <span class="availability-status available">Available Now</span>
                     </div>
-                    <div class="card">
-                        <h3>What areas do you serve?</h3>
-                        <p>We're based in Wayne, Michigan and serve the entire Detroit Metro Area. Remote services are available nationwide.</p>
+
+                    <div class="availability-item">
+                        <h4>🎪 Event Rental Services</h4>
+                        <p>Plum Party Rentals launching in 2025. Taking reservations and partnership inquiries for event services.</p>
+                        <span class="availability-status limited">Launching 2025</span>
                     </div>
-                    <div class="card">
-                        <h3>What makes Kinex Ventures different?</h3>
-                        <p>We combine expert technology solutions with community impact through our LJ's Crew program - every project helps strengthen local communities.</p>
+
+                    <div class="availability-item">
+                        <h4>🎮 Gaming & Development</h4>
+                        <p>Active development phase for gaming projects. Beta testing opportunities and development partnerships available.</p>
+                        <span class="availability-status developing">Development Phase</span>
+                    </div>
+
+                    <div class="availability-item">
+                        <h4>💼 Investment & Partnerships</h4>
+                        <p>Actively seeking strategic investors, advisors, and partners aligned with our mission-driven approach.</p>
+                        <span class="availability-status available">Open to Conversations</span>
+                    </div>
+
+                    <div class="availability-item">
+                        <h4>💙 Community Programs</h4>
+                        <p>LJ's Crew community outreach program in development. Seeking partnerships with local organizations.</p>
+                        <span class="availability-status developing">Program Development</span>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <p>&copy; 2025 Kinex Ventures. All rights reserved. | Wayne, Michigan Technology Solutions</p>
-            <p>IT Services | Cybersecurity | Game Development | Educational Technology | Community Programs</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kinex Ventures. Building tomorrow's humanity through authentic technology innovation.</p>
         </div>
     </footer>
-
-    <script src="script.js" defer></script>
-    
-    <script>
-        // Enhanced form security and validation
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contactForm');
-            const messageTextarea = document.getElementById('message');
-            const charCount = document.getElementById('charCount');
-            const submitBtn = document.getElementById('submitBtn');
-            const submitText = document.getElementById('submitText');
-            const submitLoading = document.getElementById('submitLoading');
-            
-            // Character counter
-            messageTextarea.addEventListener('input', function() {
-                const remaining = 2000 - this.value.length;
-                charCount.textContent = remaining;
-                charCount.style.color = remaining < 100 ? '#e74c3c' : '#666';
-            });
-            
-            // Form validation
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                if (validateForm()) {
-                    submitForm();
-                }
-            });
-            
-            function validateForm() {
-                let isValid = true;
-                
-                // Validate name
-                const name = document.getElementById('name');
-                if (!name.value.trim() || name.value.length < 2) {
-                    showError('nameError', 'Please enter a valid name (at least 2 characters)');
-                    isValid = false;
-                } else {
-                    hideError('nameError');
-                }
-                
-                // Validate email
-                const email = document.getElementById('email');
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email.value)) {
-                    showError('emailError', 'Please enter a valid email address');
-                    isValid = false;
-                } else {
-                    hideError('emailError');
-                }
-                
-                // Validate phone (if provided)
-                const phone = document.getElementById('phone');
-                if (phone.value && !/^[\d\s\-\+\(\)]+$/.test(phone.value)) {
-                    showError('phoneError', 'Please enter a valid phone number');
-                    isValid = false;
-                } else {
-                    hideError('phoneError');
-                }
-                
-                // Validate service selection
-                const service = document.getElementById('service');
-                if (!service.value) {
-                    showError('serviceError', 'Please select a service');
-                    isValid = false;
-                } else {
-                    hideError('serviceError');
-                }
-                
-                // Validate message
-                const message = document.getElementById('message');
-                if (!message.value.trim() || message.value.length < 10) {
-                    showError('messageError', 'Please enter a message (at least 10 characters)');
-                    isValid = false;
-                } else {
-                    hideError('messageError');
-                }
-                
-                // Check honeypot (spam protection)
-                const honeypot = document.querySelector('input[name="website"]');
-                if (honeypot.value) {
-                    console.log('Spam detected');
-                    return false;
-                }
-                
-                return isValid;
-            }
-            
-            function showError(elementId, message) {
-                const errorElement = document.getElementById(elementId);
-                errorElement.textContent = message;
-                errorElement.style.display = 'block';
-                errorElement.parentElement.querySelector('input, textarea, select').style.borderColor = '#e74c3c';
-            }
-            
-            function hideError(elementId) {
-                const errorElement = document.getElementById(elementId);
-                errorElement.style.display = 'none';
-                errorElement.parentElement.querySelector('input, textarea, select').style.borderColor = '#e9ecef';
-            }
-            
-            function submitForm() {
-                // Show loading state
-                submitText.style.display = 'none';
-                submitLoading.style.display = 'inline';
-                submitBtn.disabled = true;
-                
-                // Collect form data
-                const formData = new FormData(form);
-                
-                // Remove honeypot from submission
-                formData.delete('website');
-                
-                // Here you would send to your backend
-                // For now, simulate success after 2 seconds
-                setTimeout(() => {
-                    // Show success message
-                    document.getElementById('successMessage').style.display = 'block';
-                    form.reset();
-                    charCount.textContent = '2000';
-                    
-                    // Reset button state
-                    submitText.style.display = 'inline';
-                    submitLoading.style.display = 'none';
-                    submitBtn.disabled = false;
-                    
-                    // Scroll to success message
-                    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Track form submission (when analytics is set up)
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'form_submit', {
-                            event_category: 'Contact',
-                            event_label: 'Contact Form'
-                        });
-                    }
-                }, 2000);
-            }
-            
-            // Input sanitization (basic client-side - server-side is still required)
-            function sanitizeInput(input) {
-                return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-                           .replace(/javascript:/gi, '')
-                           .replace(/on\w+\s*=/gi, '');
-            }
-            
-            // Apply sanitization to all text inputs
-            document.querySelectorAll('input[type="text"], input[type="email"], textarea').forEach(input => {
-                input.addEventListener('blur', function() {
-                    this.value = sanitizeInput(this.value);
-                });
-            });
-        });
-    </script>
 </body>
-
 </html>

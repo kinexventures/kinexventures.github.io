@@ -4,386 +4,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Kinex Ventures</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Services - Kinex Ventures</title>
     <style>
-        /* Keep all existing styles */
-        .booking-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 0;
-            margin: 40px 0;
-            border-radius: 15px;
-            text-align: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .booking-form {
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #64b5f6;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .page-header {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
             max-width: 600px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            color: #333;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
+
+        .services-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1e293b, #334155);
         }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e9ecef;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: #667eea;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        
-        .form-row {
+
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            width: 100%;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
-        .pricing-badge {
-            background: #28a745;
-            color: white;
-            padding: 4px 12px;
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 10px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .skill-level {
-            background: #17a2b8;
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(100, 200, 255, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            margin-bottom: 1.5rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+
+        .service-features li::before {
+            content: "✓ ";
+            color: #4ade80;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .pricing-info {
+            background: rgba(100, 181, 246, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(100, 181, 246, 0.3);
+        }
+
+        .pricing-info h4 {
+            color: #64b5f6;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .pricing-info p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .service-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .service-status.active {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
             color: white;
-            padding: 4px 8px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-weight: bold;
-            margin-left: 5px;
         }
 
-        .honesty-note {
-            background: #f8f9fa;
-            border-left: 4px solid #007bff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
+        .service-status.launching {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+        }
+
+        .service-status.development {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+        }
+
+        .service-status.planning {
+            background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+            color: white;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #334155, #475569);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #64b5f6;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="Kinex Ventures Logo">
-        <nav>
-            <ul>
+        <nav class="container">
+            <div class="logo">⚡ Kinex Ventures</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="section">
-        <h2>Our Services</h2>
-        <p id="mainDescription">Honest, authentic technology services from someone actively learning and building alongside you. This isn't just work - it's my passion and my daughters' future.</p>
-        
-        <div class="honesty-note">
-            <h3>Our Honest Approach</h3>
-            <p><strong>I believe in complete transparency:</strong> I'm not a senior developer with 10 years of experience. I'm someone who's been passionately learning for 5+ years and is now ready to apply that knowledge alongside clients who value authenticity, dedication, and growth. You're not just hiring services - you're partnering with someone building their legacy.</p>
-        </div>
-        
-        <div class="card-grid">
-            <!-- Programming & Development -->
-            <div class="card">
-                <h3>Programming & Development <span class="skill-level">Learning & Building</span></h3>
-                <p><strong>Python, JavaScript, & Web Development</strong></p>
-                <ul>
-                    <li>Python automation scripts <span class="pricing-badge">$12-18/hr</span></li>
-                    <li>Basic JavaScript web features <span class="pricing-badge">$10-15/hr</span></li>
-                    <li>Programming tutoring (beginners) <span class="pricing-badge">$15-25/hr</span></li>
-                    <li>Simple web development projects <span class="pricing-badge">$10-20/hr</span></li>
-                    <li>Learning project collaboration <span class="pricing-badge">$8-12/hr</span></li>
-                </ul>
-                <p><em>Perfect for: Small business automation, learning assistance, beginner-friendly projects</em></p>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>Comprehensive technology solutions designed to solve real problems and create meaningful impact</p>
             </div>
+        </section>
 
-            <!-- Game Development & Design -->
-            <div class="card">
-                <h3>Game Development & Design <span class="skill-level">Actively Learning</span></h3>
-                <p><strong>Cooperative Gaming & Educational Design</strong></p>
-                <ul>
-                    <li>Game design consultation <span class="pricing-badge">$12-20/hr</span></li>
-                    <li>Cooperative gameplay concepts <span class="pricing-badge">$15-25/hr</span></li>
-                    <li>Educational game planning <span class="pricing-badge">$15-20/hr</span></li>
-                    <li>Godot/Unity learning partnerships <span class="pricing-badge">$8-12/hr</span></li>
-                    <li>Beta testing & feedback <span class="pricing-badge">$10-15/hr</span></li>
-                </ul>
-                <p><em>Focus: Family-friendly, non-toxic gaming experiences that bring people together</em></p>
-            </div>
+        <section class="services-section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Kinex Tech Solutions</h3>
+                        <p>Professional IT consulting, cybersecurity, and technology education services for businesses
+                            and individuals who need reliable, expert support.</p>
 
-            <!-- Educational Technology -->
-            <div class="card">
-                <h3>Educational Technology <span class="skill-level">Parent Perspective</span></h3>
-                <p><strong>Child-Safe Learning Solutions</strong></p>
-                <ul>
-                    <li>Educational content creation <span class="pricing-badge">$10-18/hr</span></li>
-                    <li>Child-safe tech planning <span class="pricing-badge">$15-25/hr</span></li>
-                    <li>Programming tutorials for kids <span class="pricing-badge">$15-20/hr</span></li>
-                    <li>Parent-friendly tech guides <span class="pricing-badge">$12-18/hr</span></li>
-                    <li>Learning pathway development <span class="pricing-badge">$15-25/hr</span></li>
-                </ul>
-                <p><em>As a single father, I understand what families need from technology</em></p>
-            </div>
+                        <ul class="service-features">
+                            <li>Cybersecurity assessments and implementation</li>
+                            <li>IT support and troubleshooting</li>
+                            <li>Technology training and digital literacy</li>
+                            <li>System optimization and maintenance</li>
+                            <li>Network setup and security</li>
+                            <li>Data backup and recovery solutions</li>
+                        </ul>
 
-            <!-- Business Planning & Research -->
-            <div class="card">
-                <h3>Business Planning & Research <span class="skill-level">Strong Planning Skills</span></h3>
-                <p><strong>Project Planning & Documentation</strong></p>
-                <ul>
-                    <li>Project planning & roadmaps <span class="pricing-badge">$12-20/hr</span></li>
-                    <li>Business concept development <span class="pricing-badge">$15-25/hr</span></li>
-                    <li>Market research & analysis <span class="pricing-badge">$10-15/hr</span></li>
-                    <li>Technical documentation <span class="pricing-badge">$12-18/hr</span></li>
-                    <li>Strategic planning assistance <span class="pricing-badge">$15-20/hr</span></li>
-                </ul>
-                <p><em>Helping turn ideas into actionable plans with realistic timelines</em></p>
-            </div>
-
-            <!-- Current Projects (Future Services) -->
-            <div class="card">
-                <h3>Current Development Projects <span class="skill-level">In Progress</span></h3>
-                <p><strong>What I'm Building (Future Services)</strong></p>
-                <ul>
-                    <li>WorldweaveMMO - Cooperative MMORPG development</li>
-                    <li>Wonder Labs Kids - Educational platform (ages 3-6)</li>
-                    <li>Spellshire Online - Cross-platform game expansion</li>
-                    <li>Party rental business - Event services planning</li>
-                    <li>Community programs - LJ's Crew development</li>
-                </ul>
-                <p><em>These represent where I'm heading - building real solutions for real problems</em></p>
-            </div>
-
-            <!-- Community & Legacy -->
-            <div class="card">
-                <h3>Community Impact & Legacy Work <span class="skill-level">Personal Mission</span></h3>
-                <p><strong>Building for the Next Generation</strong></p>
-                <ul>
-                    <li>Family-friendly technology advocacy</li>
-                    <li>Anti-toxicity in gaming communities</li>
-                    <li>Educational content for underrepresented groups</li>
-                    <li>Mentorship for aspiring developers</li>
-                    <li>Supporting other learning parents</li>
-                </ul>
-                <p><em>Every project contributes to building a better digital world for our children</em></p>
-            </div>
-        </div>
-
-        <!-- My Unique Value Proposition -->
-        <div class="honesty-note">
-            <h3>Why Choose My Services?</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px;">
-                <div>
-                    <h4>Authentic Growth Journey</h4>
-                    <p>I'm learning alongside clients, not lecturing from a pedestal. We grow together.</p>
-                </div>
-                <div>
-                    <h4>Family Perspective</h4>
-                    <p>As a single father, I understand what families actually need from technology.</p>
-                </div>
-                <div>
-                    <h4>Legacy-Focused</h4>
-                    <p>This isn't just work - it's building a better digital world for my daughters' generation.</p>
-                </div>
-                <div>
-                    <h4>Honest Communication</h4>
-                    <p>Clear about what I can do now vs. what I'm learning. No overselling, no surprises.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service Booking Section -->
-        <div class="booking-section">
-            <h2>Start a Project Together</h2>
-            <p>Ready to work with someone who's as invested in your success as their own legacy? Let's discuss how we can learn and build together.</p>
-            
-            <div class="booking-form">
-                <form id="bookingForm" onsubmit="handleBookingSubmission(event)">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
+                        <div class="pricing-info">
+                            <h4>Pricing Range</h4>
+                            <p>$50-150/hour depending on complexity. Free initial consultations available.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service Interested In *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="programming">Programming & Development</option>
-                            <option value="tutoring">Programming Tutoring</option>
-                            <option value="game-design">Game Design Consultation</option>
-                            <option value="educational">Educational Technology</option>
-                            <option value="planning">Business Planning & Research</option>
-                            <option value="collaboration">Learning Project Collaboration</option>
-                            <option value="other">Other/Multiple Services</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="budget">Project Budget Range</label>
-                            <select id="budget" name="budget">
-                                <option value="">Select budget range...</option>
-                                <option value="under-100">Under $100</option>
-                                <option value="100-300">$100 - $300</option>
-                                <option value="300-500">$300 - $500</option>
-                                <option value="500-1000">$500 - $1,000</option>
-                                <option value="1000-plus">$1,000+</option>
-                                <option value="hourly">Prefer Hourly Rate</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="timeline">Preferred Timeline</label>
-                            <select id="timeline" name="timeline">
-                                <option value="">Select timeline...</option>
-                                <option value="flexible">Flexible (Learning Together)</option>
-                                <option value="1-2-weeks">1-2 weeks</option>
-                                <option value="1-month">Within 1 month</option>
-                                <option value="1-3-months">1-3 months</option>
-                                <option value="ongoing">Ongoing Collaboration</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="projectDetails">Project Details *</label>
-                        <textarea id="projectDetails" name="projectDetails" rows="5" placeholder="Tell me about your project, your goals, and what you're hoping to achieve. I'm especially interested in projects that align with building positive technology experiences..." required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="hearAbout">How did you hear about us?</label>
-                        <select id="hearAbout" name="hearAbout">
-                            <option value="">Select...</option>
-                            <option value="social-media">Social Media</option>
-                            <option value="referral">Referral</option>
-                            <option value="github">GitHub/Portfolio</option>
-                            <option value="community">Community/Forum</option>
-                            <option value="search">Web Search</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Let's Build Something Together</button>
-                </form>
-            </div>
-        </div>
 
-        <!-- Current Learning & Development -->
-        <div style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 10px;">
-            <h3>What I'm Currently Learning & Building</h3>
-            <p>Transparency in progress - here's what I'm actively working on:</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-                <div style="background: white; padding: 20px; border-radius: 8px;">
-                    <h4>Godot & Unity Game Engines</h4>
-                    <p>Learning game development through building WorldweaveMMO. Currently focusing on multiplayer mechanics and educational game systems.</p>
-                    <small><em>Timeline: 6-12 months to intermediate proficiency</em></small>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px;">
-                    <h4>Advanced JavaScript & Web Development</h4>
-                    <p>Expanding beyond basics to build more complex interactive applications and educational platforms.</p>
-                    <small><em>Timeline: 3-6 months for significant advancement</em></small>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px;">
-                    <h4>Educational Technology Design</h4>
-                    <p>Developing trauma-informed, child-safe virtual learning environments through the Wonder Labs Kids project.</p>
-                    <small><em>Timeline: Ongoing research and development</em></small>
+                        <span class="service-status active">Active Service</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎪</div>
+                        <h3>Plum Party Rentals</h3>
+                        <p>Premium event rental services bringing memorable celebrations to life with professional
+                            equipment, setup, and consultation for all your special occasions.</p>
+
+                        <ul class="service-features">
+                            <li>Wedding ceremony and reception rentals</li>
+                            <li>Corporate event equipment and setup</li>
+                            <li>Birthday party and celebration packages</li>
+                            <li>Tables, chairs, linens, and decorations</li>
+                            <li>Professional delivery and setup</li>
+                            <li>Event planning consultation</li>
+                        </ul>
+
+                        <div class="pricing-info">
+                            <h4>Service Areas</h4>
+                            <p>Wayne County, Michigan and surrounding areas. Custom quotes based on event size and
+                                requirements.</p>
+                        </div>
+
+                        <span class="service-status launching">Launching 2025</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌿</div>
+                        <h3>KannabisWithAK</h3>
+                        <p>Professional cannabis industry consulting services helping businesses navigate complex
+                            regulations and optimize operations for sustainable growth.</p>
+
+                        <ul class="service-features">
+                            <li>Licensing and regulatory compliance guidance</li>
+                            <li>Business setup and operational consulting</li>
+                            <li>Quality assurance and safety protocols</li>
+                            <li>Strategic planning and market analysis</li>
+                            <li>Investment readiness and due diligence</li>
+                            <li>Technology integration solutions</li>
+                        </ul>
+
+                        <div class="pricing-info">
+                            <h4>Consultation</h4>
+                            <p>Hourly rates and project-based pricing available. Initial consultation to assess needs
+                                and compliance requirements.</p>
+                        </div>
+
+                        <span class="service-status active">Industry Expertise</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎮</div>
+                        <h3>Gaming Development</h3>
+                        <p>Innovative gaming experiences across multiple platforms, combining entertainment with
+                            emotional intelligence development and social learning.</p>
+
+                        <ul class="service-features">
+                            <li>WorldweaveMMO - Advanced sandbox MMORPG</li>
+                            <li>Spellshire Online - Story-driven magic RPG</li>
+                            <li>Wonder Labs Kids - Educational virtual world</li>
+                            <li>Custom game development consultation</li>
+                            <li>Beta testing and QA services</li>
+                            <li>Gaming community management</li>
+                        </ul>
+
+                        <div class="pricing-info">
+                            <h4>Development Status</h4>
+                            <p>Active development phase. Beta testing opportunities and development partnerships
+                                available.</p>
+                        </div>
+
+                        <span class="service-status development">Development Phase</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3>Educational Technology</h3>
+                        <p>Pursuing revolutionary integrated cognitive-emotional-physical development platform using AI
+                            to transform how children learn and grow.</p>
+
+                        <ul class="service-features">
+                            <li>AI-powered personalized learning systems</li>
+                            <li>Social-emotional skill development tools</li>
+                            <li>Safe virtual learning environments</li>
+                            <li>Trauma-informed educational approaches</li>
+                            <li>Parent and educator training programs</li>
+                            <li>Research collaboration opportunities</li>
+                        </ul>
+
+                        <div class="pricing-info">
+                            <h4>Grant Application</h4>
+                            <p>$275K NSF grant application submitted. Research partnerships and pilot program
+                                opportunities in development.</p>
+                        </div>
+
+                        <span class="service-status development">Grant Applied</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💙</div>
+                        <h3>LJ's Crew Community Outreach</h3>
+                        <p>Community service program planned to honor my grandfather's legacy through meaningful support
+                            for families and local organizations in need.</p>
+
+                        <ul class="service-features">
+                            <li>Mental health support initiatives (planned)</li>
+                            <li>Family assistance programs (developing)</li>
+                            <li>Youth development and education (planning)</li>
+                            <li>Employment and skills training partnerships (future)</li>
+                            <li>Community event coordination</li>
+                            <li>Local nonprofit collaboration</li>
+                        </ul>
+
+                        <div class="pricing-info">
+                            <h4>Program Development</h4>
+                            <p>Building partnerships and developing service frameworks. Community organizations
+                                interested in collaboration welcome.</p>
+                        </div>
+
+                        <span class="service-status planning">Program Development</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Work Together?</h2>
+                    <p>Whether you need immediate tech support, planning an event, seeking cannabis industry guidance,
+                        or interested in our innovative development projects - let's discuss how we can help.</p>
+                    <a href="contact.html" class="cta-button">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Kinex Ventures. Building authentic technology solutions with transparency and dedication.</p>
+        <div class="container">
+            <p>&copy; 2025 Kinex Ventures. Building tomorrow's humanity through authentic technology innovation.</p>
+        </div>
     </footer>
-
-    <script>
-        function handleBookingSubmission(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const bookingData = {};
-            for (let [key, value] of formData.entries()) {
-                bookingData[key] = value;
-            }
-            
-            console.log('Booking submission:', bookingData);
-            
-            alert(`Thank you ${bookingData.firstName}! I appreciate your interest in working together. I'll respond within 24 hours with honest feedback about how I can help with your project and what the collaboration would look like.`);
-            
-            event.target.reset();
-        }
-    </script>
 </body>
 
 </html>

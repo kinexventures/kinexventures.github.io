@@ -1,230 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Kinex Ventures | Technology Solutions & Community Impact | Wayne, Michigan</title>
-    <meta name="description" content="Kinex Ventures provides IT & Cybersecurity Consulting, Game Development, Educational Technology, and Community Programs in Wayne, Michigan. Expert technology solutions with community impact.">
-    <meta name="keywords" content="IT services Wayne Michigan, cybersecurity consulting, game development, educational technology, community programs, technology solutions Detroit">
-    <meta name="author" content="Kinex Ventures">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Local SEO -->
-    <meta name="geo.region" content="US-MI">
-    <meta name="geo.placename" content="Wayne, Michigan">
-    <meta name="geo.position" content="42.2814;-83.3863">
-    <meta name="ICBM" content="42.2814, -83.3863">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Kinex Ventures | Technology Solutions & Community Impact">
-    <meta property="og:description" content="Multi-industry technology company providing IT services, game development, educational technology, and community programs in Wayne, Michigan.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kinexventures.github.io">
-    <meta property="og:image" content="logo.png">
-    <meta property="og:site_name" content="Kinex Ventures">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kinex Ventures | Technology Solutions & Community Impact">
-    <meta name="twitter:description" content="Expert technology solutions across IT, gaming, education, and community programs in Wayne, Michigan.">
-    <meta name="twitter:image" content="logo.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kinexventures.github.io">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: https:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "TechnologyCompany",
-        "name": "Kinex Ventures",
-        "description": "Multi-industry technology company providing IT services, cybersecurity, game development, educational technology, and community programs.",
-        "url": "https://kinexventures.github.io",
-        "logo": "logo.png",
-        "foundingDate": "2025",
-        "founder": {
-            "@type": "Person",
-            "name": "Kinex Ventures Founder"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "Wayne",
-            "addressRegion": "MI",
-            "postalCode": "",
-            "addressCountry": "US"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "availableLanguage": "English"
-        },
-        "sameAs": [
-            "https://linkedin.com/company/kinex-ventures",
-            "https://twitter.com/kinexventures"
-        ],
-        "service": [
-            {
-                "@type": "Service",
-                "name": "IT Services & Cybersecurity",
-                "description": "Professional IT support, cybersecurity consulting, and technology training services."
-            },
-            {
-                "@type": "Service", 
-                "name": "Game Development",
-                "description": "MMORPG development, interactive media creation, and gaming infrastructure services."
-            },
-            {
-                "@type": "Service",
-                "name": "Educational Technology",
-                "description": "Safe virtual learning environments and educational software development for children."
-            },
-            {
-                "@type": "Service",
-                "name": "Community Programs",
-                "description": "LJ's Crew community outreach, family support, and local charity partnerships."
-            }
-        ]
-    }
-    </script>
-    
-    <!-- Additional Local Business Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Kinex Ventures",
-        "image": "logo.png",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Wayne",
-            "addressRegion": "MI",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "42.2814",
-            "longitude": "-83.3863"
-        },
-        "url": "https://kinexventures.github.io",
-        "telephone": "",
-        "priceRange": "$$",
-        "openingHours": "Mo-Fr 09:00-17:00",
-        "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "42.2814",
-                "longitude": "-83.3863"
-            },
-            "geoRadius": "50"
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Kinex Ventures - Building Tomorrow's Technology Ecosystem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    </script>
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-</head>
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #64b5f6;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23334155" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5, #29b6f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 5px rgba(100, 181, 246, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(100, 181, 246, 0.8)); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #94a3b8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1e293b, #334155);
+        }
+
+        .services h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #64b5f6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(100, 200, 255, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .service-card li {
+            padding: 0.3rem 0;
+            color: #cbd5e1;
+        }
+
+        .service-card li::before {
+            content: "✓ ";
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .service-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .service-status.active {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: white;
+        }
+
+        .service-status.launching {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+        }
+
+        .service-status.development {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+        }
+
+        .service-status.planning {
+            background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+            color: white;
+        }
+
+        .service-status.funding {
+            background: linear-gradient(135deg, #f87171, #ef4444);
+            color: white;
+        }
+
+        /* Empire Overview Section */
+        .empire-overview {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            position: relative;
+        }
+
+        .empire-overview h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #64b5f6;
+        }
+
+        .empire-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .empire-division {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .empire-division h4 {
+            margin-bottom: 1.5rem;
+            color: #64b5f6;
+            font-size: 1.3rem;
+        }
+
+        .division-companies {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .company {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #64b5f6;
+        }
+
+        .company h5 {
+            margin-bottom: 0.5rem;
+            color: #e2e8f0;
+            font-size: 1.1rem;
+        }
+
+        .company p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #cbd5e1;
+        }
+
+        .empire-strategy {
+            background: rgba(100, 181, 246, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(100, 181, 246, 0.3);
+            text-align: center;
+        }
+
+        .empire-strategy h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+        }
+
+        /* Founder Story Section */
+        .founder-story {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #334155, #475569);
+        }
+
+        .founder-story h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #64b5f6;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .story-text h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .story-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .empire-vision {
+            background: rgba(100, 181, 246, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #64b5f6;
+            margin-top: 2rem;
+        }
+
+        .empire-vision h5 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+        }
+
+        .achievements {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .achievements h5 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .achievements ul {
+            list-style: none;
+        }
+
+        .achievements li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #64b5f6;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .empire-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
 <body>
     <header>
-        <!-- Logo wrapped in a link that goes to homepage -->
-        <a href="index.html" class="logo-link" aria-label="Kinex Ventures Home">
-            <img src="logo.png" alt="Kinex Ventures Logo - Technology Solutions & Community Impact" class="logo">
-        </a>
-        <nav role="navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <nav class="container">
+            <div class="logo">⚡ Kinex Ventures</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#empire">Empire</a></li>
+                <li><a href="#founder">Story</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Kinex Ventures: Technology Solutions with Community Impact</h1>
-            <p>Multi-industry innovation lab providing IT services, cybersecurity, game development, educational technology, and community programs in Wayne, Michigan.</p>
-            <a href="services.html" class="btn" role="button" aria-label="Explore our technology services">Explore Services</a>
-        </section>
-
-        <section class="section" id="about">
-            <h2>Why Choose Kinex Ventures?</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Professional Technology Services</h3>
-                    <p>Expert IT support, cybersecurity consulting, and technology training for businesses across Michigan.</p>
-                </div>
-                <div class="card">
-                    <h3>Innovative Development</h3>
-                    <p>Game development, educational software, and interactive media creation with cutting-edge technology.</p>
-                </div>
-                <div class="card">
-                    <h3>Community-Focused Impact</h3>
-                    <p>Every project contributes to positive community change through our LJ's Crew program.</p>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Building Tomorrow's Technology Empire</h1>
+                    <p class="hero-subtitle">Single father transforming personal growth into revolutionary solutions for children's development - channeling authentic transformation into systematic change for humanity's future</p>
+                    <a href="#contact" class="cta-button">Start the Conversation</a>
                 </div>
             </div>
         </section>
-        
-        <section class="section" id="services-preview">
-            <h2>Our Core Services</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Kinex Tech Solutions</h3>
-                    <p>Cybersecurity consulting, IT support, system administration, and technology training for businesses.</p>
-                    <a href="services.html#tech-services" class="btn" style="margin-top: 1rem;">Learn More</a>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h3>Our Service Portfolio</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h4>Kinex Tech Solutions</h4>
+                        <p>Professional IT consulting, cybersecurity, and technology tutoring services for businesses and individuals.</p>
+                        <ul>
+                            <li>Cybersecurity consulting and audits</li>
+                            <li>IT support and troubleshooting</li>
+                            <li>Technology training and education</li>
+                            <li>System optimization and maintenance</li>
+                        </ul>
+                        <span class="service-status active">Active Revenue Stream</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎪</div>
+                        <h4>Plum Party Rentals</h4>
+                        <p>Premium event rental services bringing memorable celebrations to life with professional equipment and setup.</p>
+                        <ul>
+                            <li>Wedding and corporate event rentals</li>
+                            <li>Party equipment and decorations</li>
+                            <li>Professional setup and breakdown</li>
+                            <li>Custom event planning consultation</li>
+                        </ul>
+                        <span class="service-status launching">Launching 2025</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌿</div>
+                        <h4>KannabisWithAK</h4>
+                        <p>Professional cannabis industry consulting services helping businesses navigate regulations and optimize operations.</p>
+                        <ul>
+                            <li>Licensing and regulatory compliance</li>
+                            <li>Business setup and operational consulting</li>
+                            <li>Quality assurance and safety protocols</li>
+                            <li>Strategic planning and market analysis</li>
+                        </ul>
+                        <span class="service-status active">Industry Expertise</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎮</div>
+                        <h4>Gaming Development</h4>
+                        <p>Innovative gaming experiences across multiple platforms, from MMORPGs to educational virtual worlds.</p>
+                        <ul>
+                            <li>WorldweaveMMO - Advanced sandbox MMORPG</li>
+                            <li>Spellshire Online - Story-driven magic RPG</li>
+                            <li>Wonder Labs Kids - Educational virtual world</li>
+                            <li>Cross-platform integration and development</li>
+                        </ul>
+                        <span class="service-status development">Development Phase</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h4>Educational Technology</h4>
+                        <p>Pursuing integrated cognitive-emotional-physical development platform for children through AI-powered innovation.</p>
+                        <ul>
+                            <li>AI-powered personalized learning systems</li>
+                            <li>Social-emotional skill development</li>
+                            <li>Safe virtual learning environments</li>
+                            <li>Trauma-informed educational approaches</li>
+                        </ul>
+                        <span class="service-status funding">NSF Grant Applied</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💙</div>
+                        <h4>LJ's Crew Community Outreach</h4>
+                        <p>Community service program planned to honor my grandfather's legacy through meaningful support for families and local organizations.</p>
+                        <ul>
+                            <li>Mental health support initiatives (planned)</li>
+                            <li>Family assistance programs (developing)</li>
+                            <li>Youth development and education (planning)</li>
+                            <li>Employment and skills training partnerships (future)</li>
+                        </ul>
+                        <span class="service-status planning">Program Development</span>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Gaming & Interactive Media</h3>
-                    <p>WorldweaveMMO development, QA testing, gaming infrastructure, and interactive virtual worlds.</p>
-                    <a href="services.html#gaming-services" class="btn" style="margin-top: 1rem;">Learn More</a>
+            </div>
+        </section>
+
+        <section id="empire" class="empire-overview">
+            <div class="container">
+                <h3>The Kinex Ventures Ecosystem</h3>
+                <div class="empire-grid">
+                    <div class="empire-division">
+                        <h4>🔧 Technology Services Division</h4>
+                        <div class="division-companies">
+                            <div class="company">
+                                <h5>Kinex Tech Solutions</h5>
+                                <p>Professional IT consulting, cybersecurity, and technology education services. Our primary revenue generator funding innovation across all divisions.</p>
+                                <span class="service-status active">Active Revenue Stream</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="empire-division">
+                        <h4>🎪 Event Services Division</h4>
+                        <div class="division-companies">
+                            <div class="company">
+                                <h5>Plum Party Rentals</h5>
+                                <p>Premium event rental services for weddings, corporate events, and celebrations. Complete equipment rental with professional setup and consultation.</p>
+                                <span class="service-status launching">Launching 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="empire-division">
+                        <h4>🌿 Cannabis Consulting Division</h4>
+                        <div class="division-companies">
+                            <div class="company">
+                                <h5>KannabisWithAK</h5>
+                                <p>Professional cannabis industry consulting covering licensing, compliance, operations, and strategic business development for emerging and established cannabis businesses.</p>
+                                <span class="service-status active">Industry Expertise</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="empire-division">
+                        <h4>🎮 Gaming & Entertainment Division</h4>
+                        <div class="division-companies">
+                            <div class="company">
+                                <h5>WorldweaveMMO</h5>
+                                <p>Revolutionary sandbox MMORPG featuring advanced AI integration, emotional intelligence development, and cross-platform magic systems.</p>
+                                <span class="service-status development">Active Development</span>
+                            </div>
+                            <div class="company">
+                                <h5>Spellshire Online</h5>
+                                <p>Story-driven magical RPG designed to complement WorldweaveMMO with different gameplay focus and narrative structure.</p>
+                                <span class="service-status planning">Pre-Development</span>
+                            </div>
+                            <div class="company">
+                                <h5>Wonder Labs Kids</h5>
+                                <p>Educational virtual world for children ages 3-6, focusing on safe learning environments and social-emotional skill development.</p>
+                                <span class="service-status planning">Foundation Planning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="empire-division">
+                        <h4>🎓 Educational Technology Division</h4>
+                        <div class="division-companies">
+                            <div class="company">
+                                <h5>Child Development Innovation Platform</h5>
+                                <p>First-ever integrated cognitive-emotional-physical development platform using AI to revolutionize how children learn and grow. $275K NSF grant application submitted.</p>
+                                <span class="service-status funding">Grant Application Submitted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="empire-division">
+                        <h4>💙 Community Impact Division</h4>
+                        <div class="division-companies">
+                            <div class="company">
+                                <h5>LJ's Crew Community Outreach</h5>
+                                <p>Community service program planned to honor my grandfather's legacy through mental health support, family assistance, youth development, and employment partnerships.</p>
+                                <span class="service-status planning">Program Development</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Wonder Labs Kids</h3>
-                    <p>Safe educational technology for children ages 3-6, with virtual learning environments and skill development.</p>
-                    <a href="services.html#education-services" class="btn" style="margin-top: 1rem;">Learn More</a>
+
+                <div class="empire-strategy">
+                    <h4>Strategic Integration</h4>
+                    <p>Each division strengthens the others: Technology services fund innovation, gaming develops emotional intelligence frameworks, educational technology validates research, community outreach builds authentic relationships, and event/consulting services provide diverse revenue streams. This creates a self-reinforcing ecosystem designed for massive scale while maintaining authentic mission focus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="founder" class="founder-story">
+            <div class="container">
+                <h3>The Founder's Journey</h3>
+                <div class="story-content">
+                    <div class="story-text">
+                        <h4>From Personal Transformation to Revolutionary Technology</h4>
+                        <p>I'm not just working towards building an empire - I'm working towards building the better world I want to not just dream about but live in with my children. As a single father channeling profound personal transformation into systematic solutions for children's development, I'm not just creating technology; I'm building my daughters' future and every child's opportunity for integrated growth.</p>
+                        
+                        <p>My journey through challenges - including time in jail and complex relationship dynamics - sparked a conscious decision in 2020 to become the person my daughters deserve. That transformation isn't just my story; it's the foundation of authentic leadership that refuses to accept systemic limitations on children's potential.</p>
+                        
+                        <p>Every line of code, every business decision, every community program through LJ's Crew (honoring my grandfather's legacy) serves one mission: proving that technology built with genuine stakes creates revolutionary outcomes for humanity's most important investment - our children.</p>
+                        
+                        <div class="empire-vision">
+                            <h5>Building Tomorrow's Foundation Today</h5>
+                            <p>Kinex Ventures represents more than a business portfolio - it's a comprehensive ecosystem where technology services fund innovation, gaming experiences teach emotional intelligence, community outreach creates systematic change, and education technology revolutionizes child development. Each venture strengthens the others, creating sustainable impact that scales globally while remaining rooted in authentic personal mission.</p>
+                        </div>
+                    </div>
+                    <div class="achievements">
+                        <h5>Recent Milestones</h5>
+                        <ul>
+                            <li>✅ NSF SBIR Grant Applied ($275K potential funding)</li>
+                            <li>✅ LinkedIn Business Validation (Investor Engagement Received)</li>
+                            <li>✅ Corporate Structure Planned (Delaware C-Corp with subsidiaries)</li>
+                            <li>✅ Multi-Platform Gaming Development Pipeline</li>
+                            <li>✅ Community Impact Program (LJ's Crew) In Development</li>
+                            <li>✅ Professional Service Revenue Streams Established</li>
+                            <li>✅ Complete Empire Ecosystem Operational</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h3>Ready to Build the Future?</h3>
+                <p>Whether you're an investor seeking authentic entrepreneurship, an advisor passionate about child development, or a partner aligned with systematic change - let's start the conversation.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>🤝 Business Inquiries</h4>
+                        <p>kinnexventure@protonmail.com</p>
+                        <p>313-542-4207</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🌐 Professional Network</h4>
+                        <p>LinkedIn: Connect for authentic entrepreneurship</p>
+                        <p>Location: Wayne County, Michigan</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>💙 Community Impact</h4>
+                        <p>LJ's Crew Community Outreach (In Development)</p>
+                        <p>Future partnerships and collaboration</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <p>&copy; 2025 Kinex Ventures. All rights reserved. | Wayne, Michigan Technology Solutions</p>
-            <p>Serving Detroit Metro Area | IT Services, Cybersecurity, Game Development, Educational Technology</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kinex Ventures. Building tomorrow's humanity through authentic technology innovation.</p>
         </div>
     </footer>
-
-    <script src="script.js" defer></script>
-    
-    <!-- Google Analytics (when ready) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script> -->
 </body>
-
 </html>
