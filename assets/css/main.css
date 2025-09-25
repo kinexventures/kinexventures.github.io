@@ -1,7 +1,7 @@
 /*
  * Kinex Ventures - main.css
- * Design Philosophy: Vibrant, Professional, High-Tech Azure Scheme
- * Colors: Charcoal (#0A0A0F), Azure (#007BFF), Cyan/Green (#17A2B8)
+ * Design Philosophy: Professional, Cohesive, Kinex Logo Palette
+ * Colors: Charcoal (#0A0A0F), Deep Logo Blue (#2C5E8A), Vibrant Logo Teal (#66D9A7), Subtle Gold (#FFD700)
  */
 
 /* --- Base & Utilities --- */
@@ -32,12 +32,12 @@ h1, h2, h3, h4 {
 
 a {
     text-decoration: none;
-    color: #007BFF; /* Electric Azure */
+    color: #2C5E8A; /* Deep Logo Blue */
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #17A2B8; /* Vibrant Cyan/Green */
+    color: #66D9A7; /* Vibrant Logo Teal */
 }
 
 section {
@@ -48,7 +48,7 @@ section {
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 3rem;
-    color: #007BFF; /* Electric Azure */
+    color: #2C5E8A; /* Deep Logo Blue */
 }
 
 /* --- Header & Navigation --- */
@@ -60,7 +60,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #007BFF;
+    border-bottom: 2px solid #2C5E8A; /* Deep Logo Blue accent */
 }
 
 nav {
@@ -74,7 +74,7 @@ nav {
     display: block;
     height: 50px;
     width: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5)); /* Azure glow */
+    filter: drop-shadow(0 0 5px rgba(44, 94, 138, 0.5)); /* Deep Logo Blue glow */
 }
 
 .nav-links {
@@ -92,14 +92,14 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #007BFF;
-    border-bottom: 2px solid #007BFF;
+    color: #2C5E8A; /* Deep Logo Blue */
+    border-bottom: 2px solid #2C5E8A;
 }
 
 /* --- CTA Button --- */
 .cta-button {
     display: inline-block;
-    background: #007BFF; /* Electric Azure */
+    background: #2C5E8A; /* Deep Logo Blue */
     color: #FFFFFF; /* White Text */
     padding: 1rem 3rem;
     border-radius: 5px;
@@ -112,8 +112,8 @@ nav {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    background: #17A2B8; /* Shift to Cyan/Green on hover for secondary accent */
-    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+    background: #66D9A7; /* Vibrant Logo Teal on hover */
+    box-shadow: 0 10px 30px rgba(44, 94, 138, 0.4);
 }
 
 /* --- Hero Section (index.html) --- */
@@ -129,11 +129,11 @@ nav {
     font-size: 3.8rem;
     margin-bottom: 1rem;
     color: #fff;
-    text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    text-shadow: 0 0 10px rgba(44, 94, 138, 0.3);
 }
 
 .hero-h1-accent {
-    background: linear-gradient(90deg, #007BFF, #17A2B8); /* Azure to Cyan gradient */
+    background: linear-gradient(90deg, #2C5E8A, #66D9A7); /* Deep Blue to Teal gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -160,12 +160,12 @@ nav {
     background: #0A0A0F;
     border-radius: 10px;
     padding: 2rem;
-    border-top: 5px solid #007BFF;
+    border-top: 5px solid #2C5E8A; /* Deep Logo Blue */
 }
 
 .metric-card h4 {
     font-size: 3rem;
-    color: #007BFF;
+    color: #2C5E8A; /* Deep Logo Blue */
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
@@ -187,17 +187,17 @@ nav {
     border-radius: 10px;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 123, 255, 0.2);
+    border: 1px solid rgba(44, 94, 138, 0.2); /* Deep Logo Blue hint */
     min-height: 250px;
 }
 
 .venture-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(44, 94, 138, 0.2);
 }
 
 .venture-card h4 {
-    color: #007BFF;
+    color: #2C5E8A; /* Deep Logo Blue */
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -216,7 +216,7 @@ nav {
     font-size: 0.8rem;
     font-weight: 600;
     color: #FFFFFF;
-    background: #007BFF; /* Azure */
+    background: #2C5E8A; /* Deep Logo Blue */
     margin-top: 1rem;
 }
 
@@ -226,7 +226,7 @@ nav {
 }
 
 .card-status.non-profit {
-    background: #17A2B8; /* Vibrant Cyan/Green */
+    background: #66D9A7; /* Vibrant Logo Teal */
     color: white;
 }
 
@@ -240,7 +240,7 @@ nav {
 }
 
 .story-text h4 {
-    color: #007BFF;
+    color: #2C5E8A; /* Deep Logo Blue */
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
@@ -249,12 +249,12 @@ nav {
     background: #0A0A0F;
     border-radius: 10px;
     padding: 2rem;
-    border-left: 5px solid #17A2B8; /* Cyan for community */
+    border-left: 5px solid #66D9A7; /* Vibrant Logo Teal for community */
     margin-top: 2rem;
 }
 
 .community-mission h5 {
-    color: #17A2B8;
+    color: #66D9A7; /* Vibrant Logo Teal */
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -267,7 +267,7 @@ nav {
 }
 
 .milestones h5 {
-    color: #007BFF;
+    color: #2C5E8A; /* Deep Logo Blue */
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
@@ -298,16 +298,16 @@ nav {
     background: #181C26;
     border-radius: 10px;
     padding: 2rem;
-    border-top: 5px solid #007BFF;
+    border-top: 5px solid #2C5E8A; /* Deep Logo Blue */
 }
 
 .contact-item h4 {
-    color: #007BFF;
+    color: #2C5E8A; /* Deep Logo Blue */
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 .contact-item-community {
-    border-top: 5px solid #17A2B8;
+    border-top: 5px solid #66D9A7; /* Vibrant Logo Teal for community contact */
 }
 
 /* --- Footer --- */
@@ -317,7 +317,7 @@ footer {
     text-align: center;
     color: #6C757D;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(0, 123, 255, 0.1);
+    border-top: 1px solid rgba(44, 94, 138, 0.1); /* Deep Logo Blue hint */
 }
 
 /* --- Responsive Design --- */
