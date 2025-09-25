@@ -1,0 +1,343 @@
+/*
+ * Kinex Ventures - main.css
+ * Design Philosophy: Vibrant, Professional, High-Tech Azure Scheme
+ * Colors: Charcoal (#0A0A0F), Azure (#007BFF), Cyan/Green (#17A2B8)
+ */
+
+/* --- Base & Utilities --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0A0A0F; /* Rich Charcoal */
+    color: #F8F9FA; /* Light Silver */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF; /* Electric Azure */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #17A2B8; /* Vibrant Cyan/Green */
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: #007BFF; /* Electric Azure */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #007BFF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling for Image */
+.logo img {
+    display: block;
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5)); /* Azure glow */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #F8F9FA;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 0.25rem;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+}
+
+/* --- CTA Button --- */
+.cta-button {
+    display: inline-block;
+    background: #007BFF; /* Electric Azure */
+    color: #FFFFFF; /* White Text */
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background: #17A2B8; /* Shift to Cyan/Green on hover for secondary accent */
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Hero Section (index.html) --- */
+.hero {
+    padding: 10rem 0 6rem;
+    text-align: center;
+    background: #181C26; /* Dark Blue-Grey */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.hero-h1-accent {
+    background: linear-gradient(90deg, #007BFF, #17A2B8); /* Azure to Cyan gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    color: #ADB5BD; /* Muted text */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Metrics Grid (index.html) --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.metric-card {
+    background: #0A0A0F;
+    border-radius: 10px;
+    padding: 2rem;
+    border-top: 5px solid #007BFF;
+}
+
+.metric-card h4 {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.metric-card p {
+    color: #ADB5BD;
+    font-size: 1.1rem;
+}
+
+/* --- Portfolio/Venture Cards --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.venture-card {
+    background: #181C26; /* Dark Blue-Grey */
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    min-height: 250px;
+}
+
+.venture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
+}
+
+.venture-card h4 {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.venture-card h4 span {
+    font-size: 1.1rem;
+    color: #ADB5BD;
+    display: block;
+    font-weight: 400;
+}
+
+.card-status {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #007BFF; /* Azure */
+    margin-top: 1rem;
+}
+
+.card-status.stealth {
+     background: #6C757D; /* Muted Grey */
+     color: white;
+}
+
+.card-status.non-profit {
+    background: #17A2B8; /* Vibrant Cyan/Green */
+    color: white;
+}
+
+
+/* --- About Page Specifics --- */
+.story-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.story-text h4 {
+    color: #007BFF;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.community-mission {
+    background: #0A0A0F;
+    border-radius: 10px;
+    padding: 2rem;
+    border-left: 5px solid #17A2B8; /* Cyan for community */
+    margin-top: 2rem;
+}
+
+.community-mission h5 {
+    color: #17A2B8;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.milestones {
+    background: #181C26;
+    border-radius: 10px;
+    padding: 2rem;
+    border-top: 5px solid #ADB5BD;
+}
+
+.milestones h5 {
+    color: #007BFF;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.milestones ul {
+    list-style: none;
+}
+
+.milestones li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.milestones li:last-child {
+    border-bottom: none;
+}
+
+/* --- Contact Page Specifics --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.contact-item {
+    background: #181C26;
+    border-radius: 10px;
+    padding: 2rem;
+    border-top: 5px solid #007BFF;
+}
+
+.contact-item h4 {
+    color: #007BFF;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.contact-item-community {
+    border-top: 5px solid #17A2B8;
+}
+
+/* --- Footer --- */
+footer {
+    background: #000000;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #6C757D;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .metrics-grid, .card-grid, .contact-grid, .story-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    section {
+        padding: 4rem 0;
+    }
+}
