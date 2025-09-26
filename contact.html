@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinex Ventures - Contact</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Kinex Ventures</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Kinex Ventures Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="ai-systems.html">AI Systems</a></li>
-                <li><a href="ventures.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="contact-us" style="background: #181C26;">
-            <div class="container">
-                <h2 class="section-title" style="color: #F8F9FA;">Start the Conversation</h2>
-                <p class="hero-subtitle">Whether for investment, strategic partnership, or professional service inquiries, we are ready to engage.</p>
-                
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h4>🤝 Business Inquiries</h4>
-                        <p style="font-size: 1.1rem; color: #2C5E8A;">kinnexventure@protonmail.com</p>
-                        <p>313-542-4207</p>
-                        <p style="margin-top: 1rem;">Wayne County, Michigan</p>
-                    </div>
+  <main>
+    <section id="contact">
+      <form id="contactForm" action="https://formspree.io/f/xwpndzjj" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="hp_field" style="display:none">
 
-                    <div class="contact-item">
-                        <h4>🔗 Professional Network</h4>
-                        <p style="font-size: 1.1rem; color: #2C5E8A;">LinkedIn Profile</p>
-                        <p>Connect for updates on AI systems and multi-venture strategy.</p>
-                        <p style="margin-top: 1rem;">**Note**: Strict use of professional channels.</p>
-                    </div>
-                    
-                    <div class="contact-item contact-item-community">
-                        <h4>💙 Community Impact</h4>
-                        <p style="font-size: 1.1rem; color: #66D9A7;">LJ's Crew Partnership</p>
-                        <p>Inquiries for supporting mental health and family assistance programs.</p>
-                        <p style="margin-top: 1rem;">Email for Non-Profit Collaboration</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact-form-placeholder" style="text-align: center;">
-            <div class="container">
-                <h3 style="color: #F8F9FA; margin-bottom: 1rem; font-size: 2.5rem;">Secure Contact Form (Future Implementation)</h3>
-                <p style="color: #ADB5BD; font-style: italic;">A secure contact form will be implemented here to streamline professional communications and maintain data integrity.</p>
-            </div>
-        </section>
-    </main>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <footer>
-        <div class="container">
-            <p>Kinex Ventures | &copy; 2025. All rights reserved.</p>
-        </div>
-    </footer>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="links">
+      <h3>External Links</h3>
+      <a href="https://external.com" target="_blank" rel="noopener">External</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kinex Ventures</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      if(form.hp_field.value !== '') {
+        e.preventDefault();
+        console.log('Honeypot triggered — submission blocked.');
+      }
+    });
+  </script>
 </body>
 </html>
