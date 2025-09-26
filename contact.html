@@ -4,57 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Kinex Ventures</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+
+  <div id="nav-placeholder"></div>
 
   <main>
-    <section id="contact">
-      <form id="contactForm" action="https://formspree.io/f/xwpndzjj" method="POST">
-        <!-- Honeypot -->
-        <input type="text" name="hp_field" style="display:none">
+    <h1>Contact Us</h1>
+    <form action="https://formspree.io/f/xwpndzjj" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-
-    <section id="links">
-      <h3>External Links</h3>
-      <a href="https://external.com" target="_blank" rel="noopener">External</a>
-    </section>
+      <button type="submit">Send</button>
+    </form>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Kinex Ventures</p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
-  <script>
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', function(e) {
-      if(form.hp_field.value !== '') {
-        e.preventDefault();
-        console.log('Honeypot triggered — submission blocked.');
-      }
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
