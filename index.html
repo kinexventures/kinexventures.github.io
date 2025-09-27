@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kinex Ventures - Building futures, one connection at a time. A holding company innovating in tech, education, gaming, and community impact.">
-  <title>Kinex Ventures | Building futures, one connection at a time</title>
+  <meta name="description" content="Kinex Ventures - Building futures, one connection at a time.">
+  <title>Kinex Ventures</title>
   <link rel="stylesheet" href="assets/main.css">
   <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
+  <!-- Animated Background -->
+  <canvas id="bg-canvas"></canvas>
+
   <!-- Header / Nav -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">Kinex Ventures</a>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="process.html">Process</a></li>
         <li><a href="community.html">Community</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -24,20 +29,49 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Kinex Ventures</h1>
-      <p class="tagline">Building futures, one connection at a time.</p>
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn primary">Start Your Project</a>
-        <a href="ventures.html" class="btn secondary">Explore Our Ventures</a>
-      </div>
+    <h1>Kinex Ventures</h1>
+    <p>Building futures, one connection at a time.</p>
+    <div class="hero-buttons">
+      <a href="ventures.html" class="btn primary">Explore Ventures</a>
+      <a href="contact.html" class="btn secondary">Get in Touch</a>
     </div>
   </section>
 
   <!-- Overview Section -->
   <section class="overview">
-    <h2>Innovation Meets Connection</h2>
-    <p>We’re a holding company bridging technology, creativity, and community. From IT and cybersecurity to gaming, education, and events, Kinex Ventures builds ecosystems where ideas thrive and futures connect.</p>
+    <h2>Who We Are</h2>
+    <p>Kinex Ventures is a holding company building innovation, technology, and community impact. We create solutions, scale ideas, and empower people to thrive.</p>
+  </section>
+
+  <!-- Ventures Preview -->
+  <section class="ventures">
+    <h2>Our Ventures</h2>
+    <div class="ventures-grid">
+      <div class="venture-card">
+        <h3>Kinex Tech Solutions</h3>
+        <p>IT & cybersecurity services for businesses ready to scale safely.</p>
+      </div>
+      <div class="venture-card">
+        <h3>Wonder Labs Kids</h3>
+        <p>Educational media & experiences for curious minds.</p>
+      </div>
+      <div class="venture-card">
+        <h3>Vortex Interactive</h3>
+        <p>Innovative gaming & immersive experiences for all players.</p>
+      </div>
+      <div class="venture-card">
+        <h3>Plum Party Rentals</h3>
+        <p>Community-first event rentals and celebrations made easy.</p>
+      </div>
+      <div class="venture-card">
+        <h3>KannabisWithAK</h3>
+        <p>Cannabis consulting & growth strategies with compliance focus.</p>
+      </div>
+      <div class="venture-card">
+        <h3>LJ’s Crew</h3>
+        <p>Social impact events and consulting that make a difference.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -48,5 +82,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
