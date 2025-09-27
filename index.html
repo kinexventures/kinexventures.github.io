@@ -1,78 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ✅ Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinex Ventures | Building Generational Wealth</title>
-  <meta name="description" content="Kinex Ventures is building generational wealth and a legacy of innovation and service through technology, education, and community impact." />
-
-  <!-- ✅ Styles -->
-  <link rel="stylesheet" href="assets/main.css" />
-
-  <!-- ✅ Scripts -->
-  <script defer src="main.js"></script>
-
-  <!-- ✅ Security (CSP for extra hardening) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io;">
-
-  <!-- ✅ Favicon (optional, drop your .ico or .png into /assets/images/) -->
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kinex Ventures - Building futures, one connection at a time. A holding company innovating in tech, education, gaming, and community impact.">
+  <title>Kinex Ventures | Building futures, one connection at a time</title>
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 <body>
-  <!-- ✅ Header / Navigation -->
-  <div id="nav-placeholder"></div>
+  <!-- Header / Nav -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Kinex Ventures</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- ✅ Hero Section -->
-  <main>
-    <section class="hero">
-      <img src="assets/logo.png" alt="Kinex Ventures Logo" class="logo" />
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
       <h1>Kinex Ventures</h1>
-      <p>Building generational wealth through innovation + service for future generations.</p>
-    </section>
+      <p class="tagline">Building futures, one connection at a time.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn primary">Start Your Project</a>
+        <a href="ventures.html" class="btn secondary">Explore Our Ventures</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- ✅ About Section -->
-    <section class="about">
-      <h2>Who We Are</h2>
-      <p>
-        Kinex Ventures is a master holding company focused on creating sustainable businesses across technology, education, entertainment, and community services. Our mission is to innovate while building a legacy of generational wealth and opportunity.
-      </p>
-    </section>
+  <!-- Overview Section -->
+  <section class="overview">
+    <h2>Innovation Meets Connection</h2>
+    <p>We’re a holding company bridging technology, creativity, and community. From IT and cybersecurity to gaming, education, and events, Kinex Ventures builds ecosystems where ideas thrive and futures connect.</p>
+  </section>
 
-  <!-- ✅ Subsidiaries Overview -->
-<section class="subsidiaries">
-  <h2>Our Ventures</h2>
-  <ul>
-    <li><strong>Kinex Tech Solutions:</strong> IT & cybersecurity services.</li>
-    <li><strong>Wonder Labs Kids:</strong> Educational media for children.</li>
-    <li><strong>Vortex Interactive:</strong> Gaming development & immersive experiences.</li>
-    <li><strong>Plum Party Rentals:</strong> Event rentals & logistics.</li>
-    <li><strong>KannabisWithAK:</strong> Cannabis industry consulting.</li>
-    <li><strong>LJ's Crew:</strong> Social impact events & consulting.</li>
-  </ul>
-</section>
-
-
-    <!-- ✅ Contact Form -->
-    <section class="contact">
-      <h2>Get in Touch</h2>
-      <form action="https://formspree.io/f/xwpndzjj" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required />
-
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" rows="5" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- ✅ Footer -->
-  <div id="footer-placeholder"></div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kinex Ventures. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
-
