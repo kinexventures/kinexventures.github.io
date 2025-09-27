@@ -1,112 +1,98 @@
-/* ===== GLOBAL RESET ===== */
+/* ======================
+   GENERAL RESET & BASE
+====================== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
   line-height: 1.6;
-  background: #f9fafb;
-  color: #222;
+  font-size: 16px;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  background: #111;
-  color: #fff;
-  padding: 1rem 2rem;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar a {
-  color: #fff;
+a {
+  color: #00f0ff;
   text-decoration: none;
-  margin-left: 1.5rem;
 }
 
-.navbar a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-/* ===== HERO ===== */
-.hero {
-  text-align: center;
-  padding: 5rem 1rem;
-  background: linear-gradient(135deg, #111, #333);
-  color: #fff;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.hero img.logo {
-  max-width: 180px;
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
-  color: #111;
-}
-
-/* ===== SUBSIDIARIES ===== */
-.subsidiaries ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.subsidiaries li {
-  margin-bottom: 0.75rem;
-}
-
-/* ===== CONTACT FORM ===== */
-form {
+/* ======================
+   NAVBAR
+====================== */
+.navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15,15,15,0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+  color: #00f0ff;
+}
+
+/* MOBILE NAV */
+.menu-toggle {
+  display: none;
   flex-direction: column;
-  gap: 0.75rem;
-}
-
-input, textarea, button {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background: #111;
-  color: #fff;
-  border: none;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-button:hover {
-  background: #333;
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #00f0ff;
+  margin-bottom: 5px;
+  border-radius: 3px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background: #111;
-  color: #fff;
+/* ======================
+   HERO SECTION
+====================== */
+.page-hero, .hero {
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
+  padding: 6rem 2rem 4rem 2rem;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
 }
+
+.page-hero h1, .hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.page-hero
