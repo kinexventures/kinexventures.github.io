@@ -3,10 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free business assessment tools - IT security and cannabis compliance calculators">
+  <meta name="description" content="Free business assessment tools for Michigan businesses">
   <title>Projects - Kinex Ventures</title>
   <link rel="stylesheet" href="assets/main.css">
   <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    .project-card {
+      background: rgba(20, 20, 20, 0.8);
+      border: 2px solid rgba(0, 240, 255, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      border-color: #00f0ff;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+    }
+    .project-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #00f0ff, #00ff88);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-card.cannabis .project-icon {
+      background: linear-gradient(135deg, #00ff88, #00f0ff);
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    .feature-list li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #ccc;
+    }
+    .feature-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00f0ff;
+      font-weight: bold;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(0, 240, 255, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00f0ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <canvas id="bg-canvas"></canvas>
@@ -27,96 +97,118 @@
 
   <section class="page-hero">
     <h1>Free Business Tools</h1>
-    <p>Professional assessment calculators built for Michigan businesses</p>
+    <p>Professional assessment calculators for Michigan businesses</p>
   </section>
 
   <section class="overview">
     <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+      
       <div style="text-align: center; margin-bottom: 3rem;">
-        <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
-          We've built free assessment tools to help businesses understand their IT needs and optimize operations. 
-          No email required, instant results, 100% free.
+        <p style="font-size: 1.1rem; color: #ccc; max-width: 800px; margin: 0 auto;">
+          We built these free tools to help Michigan businesses understand their technology needs 
+          and compliance requirements. No email required, instant results, completely free.
         </p>
       </div>
 
-      <div class="ventures-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <!-- Calculator Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        
         <!-- IT Security Calculator -->
-        <div class="venture-card" style="border: 2px solid #00f0ff;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <svg style="width: 64px; height: 64px; color: #00f0ff;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="project-card">
+          <div class="project-icon">
+            <svg style="width: 48px; height: 48px; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
             </svg>
           </div>
-          <h3>IT Health & Security Assessment</h3>
-          <p>Get your IT Efficiency Score and Security Risk Analysis in 5 minutes. Discover vulnerabilities before they become problems.</p>
-          <ul style="list-style: none; padding: 1rem 0; margin: 1rem 0;">
-            <li style="margin-bottom: 0.5rem;">✓ Complete 25-point analysis</li>
-            <li style="margin-bottom: 0.5rem;">✓ Instant ROI calculation</li>
-            <li style="margin-bottom: 0.5rem;">✓ Priority action plan</li>
-          </ul>
-          <a href="https://kinextech.github.io" class="btn primary" style="display: block; text-align: center; margin-top: 1rem;">
-            Start Free Assessment →
-          </a>
-          <p style="text-align: center; font-size: 0.85rem; color: #888; margin-top: 1rem;">
-            Used by 500+ Michigan businesses
+          
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">IT Health & Security Assessment</h3>
+          
+          <p style="color: #aaa; margin-bottom: 1.5rem; text-align: center;">
+            Get your IT Efficiency Score and Security Risk Analysis in 5 minutes. 
+            Identify vulnerabilities before they become costly problems.
           </p>
+
+          <ul class="feature-list">
+            <li>Complete 25-point infrastructure analysis</li>
+            <li>Security risk grade (A-F rating)</li>
+            <li>Monthly cost recommendations</li>
+            <li>ROI calculator for IT investments</li>
+            <li>Priority action plan with timelines</li>
+          </ul>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://kinextech.github.io" class="btn primary" style="display: inline-block;">
+              Start Free Assessment →
+            </a>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
+              No email required • 5 minute assessment
+            </p>
+          </div>
         </div>
 
-        <!-- Metrc Calculator -->
-        <div class="venture-card" style="border: 2px solid #00ff88;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <svg style="width: 64px; height: 64px; color: #00ff88;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Cannabis Metrc Calculator -->
+        <div class="project-card cannabis">
+          <div class="project-icon">
+            <svg style="width: 48px; height: 48px; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
             </svg>
           </div>
-          <h3>Cannabis Metrc ROI Calculator</h3>
-          <p>Calculate your Metrc compliance automation savings with Michigan's unique 280E tax benefits. Built for Michigan cannabis operators.</p>
-          <ul style="list-style: none; padding: 1rem 0; margin: 1rem 0;">
-            <li style="margin-bottom: 0.5rem;">✓ Michigan 280E tax savings (6%)</li>
-            <li style="margin-bottom: 0.5rem;">✓ Break-even analysis</li>
-            <li style="margin-bottom: 0.5rem;">✓ Compliance risk assessment</li>
-          </ul>
-          <a href="https://kinexcanna.github.io" class="btn primary" style="display: block; text-align: center; margin-top: 1rem; background: #00ff88;">
-            Calculate Your ROI →
-          </a>
-          <p style="text-align: center; font-size: 0.85rem; color: #888; margin-top: 1rem;">
-            Trusted by Michigan dispensaries
+          
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">Michigan Cannabis Metrc ROI Calculator</h3>
+          
+          <p style="color: #aaa; margin-bottom: 1.5rem; text-align: center;">
+            Calculate compliance automation savings with Michigan's unique 280E tax benefits. 
+            Built specifically for Michigan cannabis operators.
           </p>
-        </div>
-      </div>
 
-      <!-- Stats Section -->
-      <div style="margin: 4rem 0; padding: 2rem; background: rgba(0,240,255,0.05); border-radius: 8px; border: 1px solid rgba(0,240,255,0.2);">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-          <div>
-            <div style="font-size: 2.5rem; font-weight: 700; color: #00f0ff;">500+</div>
-            <div style="color: #888;">Businesses Assessed</div>
-          </div>
-          <div>
-            <div style="font-size: 2.5rem; font-weight: 700; color: #00ff88;">$2.3M</div>
-            <div style="color: #888;">Savings Identified</div>
-          </div>
-          <div>
-            <div style="font-size: 2.5rem; font-weight: 700; color: #ffaa00;">5 min</div>
-            <div style="color: #888;">Average Time</div>
-          </div>
-          <div>
-            <div style="font-size: 2.5rem; font-weight: 700; color: #ff00ff;">95%</div>
-            <div style="color: #888;">Find Critical Issues</div>
+          <ul class="feature-list">
+            <li>Michigan 280E tax savings calculation (6%)</li>
+            <li>Labor cost reduction analysis</li>
+            <li>Break-even timeline projection</li>
+            <li>Compliance fine risk assessment</li>
+            <li>3-year ROI projection</li>
+          </ul>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://kinexcanna.github.io" class="btn primary" style="display: inline-block; background: #00ff88;">
+              Calculate Your ROI →
+            </a>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
+              Michigan-specific • Adult-use & Medical
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- CTA -->
-      <div style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(0,240,255,0.1), rgba(0,255,136,0.1)); border-radius: 8px; margin-top: 3rem;">
-        <h2 style="margin-bottom: 1rem;">Need Help Implementing These Solutions?</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #ccc;">
-          Kinex Tech Solutions provides full IT support, cybersecurity services, 
-          and cannabis compliance consulting throughout Michigan.
+      <!-- Why These Tools Section -->
+      <div style="background: rgba(0, 240, 255, 0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(0, 240, 255, 0.2); margin-bottom: 3rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Why We Built These Tools</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div>
+            <h3 style="color: #00f0ff; margin-bottom: 0.5rem;">Transparency</h3>
+            <p style="color: #aaa;">Most businesses don't know what "good" IT looks like. These tools provide objective, industry-standard benchmarks.</p>
+          </div>
+          <div>
+            <h3 style="color: #00ff88; margin-bottom: 0.5rem;">Education</h3>
+            <p style="color: #aaa;">Understanding your risks and costs empowers better business decisions, whether you work with us or not.</p>
+          </div>
+          <div>
+            <h3 style="color: #ffaa00; margin-bottom: 0.5rem;">Efficiency</h3>
+            <p style="color: #aaa;">Get instant insights without scheduling consultations or waiting for quotes. Your time is valuable.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(0,240,255,0.1), rgba(0,255,136,0.1)); border-radius: 12px;">
+        <h2 style="margin-bottom: 1rem;">Ready to Take Action?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #ccc; max-width: 700px; margin-left: auto; margin-right: auto;">
+          After you run your assessment, Kinex Tech Solutions can help implement the recommendations. 
+          From basic IT support to full compliance automation, we've got you covered.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="tel:+13135424207" class="btn primary">Schedule Free Consultation</a>
-          <a href="contact.html" class="btn secondary">Contact Us</a>
+          <a href="contact.html" class="btn primary">Schedule Free Consultation</a>
+          <a href="ventures.html" class="btn secondary">View All Services</a>
         </div>
       </div>
     </div>
