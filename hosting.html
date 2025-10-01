@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional calculator hosting for Michigan businesses - Fast, reliable, mobile-optimized">
+  <title>Calculator Hosting - Kinex Ventures</title>
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    .pricing-card {
+      background: rgba(20, 20, 20, 0.8);
+      border: 2px solid rgba(0, 240, 255, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card:hover {
+      border-color: #00f0ff;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+    }
+    .pricing-card.featured {
+      border-color: #00f0ff;
+      background: rgba(0, 240, 255, 0.05);
+      transform: scale(1.05);
+    }
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+    .price-tag {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00f0ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 1rem 0;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+      flex-grow: 1;
+    }
+    .feature-list li {
+      padding: 0.7rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    .feature-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00f0ff;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: linear-gradient(135deg, #00f0ff, #00ff88);
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .example-card {
+      background: rgba(20, 20, 20, 0.8);
+      border: 2px solid rgba(0, 240, 255, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .example-card:hover {
+      border-color: #00ff88;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+    }
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .industry-item {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0, 240, 255, 0.05);
+      border-radius: 8px;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    .industry-item:hover {
+      border-color: #00f0ff;
+      background: rgba(0, 240, 255, 0.1);
+    }
+    .cta-section {
+      background: linear-gradient(135deg, rgba(0,240,255,0.1), rgba(0,255,136,0.1));
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Kinex Ventures</a>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="hosting.html" class="active">Calculator Hosting</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Professional Calculator Hosting</h1>
+    <p>Custom business calculators that help you close more sales</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+      <span style="background: rgba(0,240,255,0.2); padding: 0.5rem 1.5rem; border-radius: 20px; color: #00f0ff; font-weight: 600;">⚡ 48-Hour Setup</span>
+      <span style="background: rgba(0,255,136,0.2); padding: 0.5rem 1.5rem; border-radius: 20px; color: #00ff88; font-weight: 600;">📱 Mobile Optimized</span>
+      <span style="background: rgba(255,170,0,0.2); padding: 0.5rem 1.5rem; border-radius: 20px; color: #ffaa00; font-weight: 600;">💼 Professional Design</span>
+    </div>
+  </section>
+
+  <section class="overview">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+      
+      <!-- Live Examples -->
+      <div style="margin-bottom: 4rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Live Examples</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+          
+          <div class="example-card">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: linear-gradient(135deg, #00f0ff, #00ff88); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                <svg style="width: 48px; height: 48px; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">IT Security Calculator</h3>
+              <span style="background: rgba(0,240,255,0.2); padding: 0.3rem 1rem; border-radius: 15px; color: #00f0ff; font-size: 0.85rem; font-weight: 600;">LIVE DEMO</span>
+            </div>
+            <p style="color: #aaa; margin-bottom: 1.5rem;">Complete IT health assessment for businesses. Shows security risks, IT efficiency scores, and ROI calculations.</p>
+            <a href="https://kinextech.github.io" target="_blank" class="btn primary" style="width: 100%; text-align: center;">View Live Calculator →</a>
+          </div>
+
+          <div class="example-card">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: linear-gradient(135deg, #00ff88, #00f0ff); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                <svg style="width: 48px; height: 48px; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Cannabis Metrc ROI</h3>
+              <span style="background: rgba(0,255,136,0.2); padding: 0.3rem 1rem; border-radius: 15px; color: #00ff88; font-size: 0.85rem; font-weight: 600;">LIVE DEMO</span>
+            </div>
+            <p style="color: #aaa; margin-bottom: 1.5rem;">Michigan-specific compliance automation calculator with 280E tax benefits for cannabis operators.</p>
+            <a href="https://kinexcanna.github.io" target="_blank" class="btn primary" style="width: 100%; text-align: center; background: #00ff88;">View Live Calculator →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Section -->
+      <div style="margin-bottom: 4rem;">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Simple, Transparent Pricing</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 3rem; font-size: 1.1rem;">All plans include hosting, SSL, and mobile optimization</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: stretch;">
+          
+          <!-- Basic Plan -->
+          <div class="pricing-card">
+            <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Basic</h3>
+            <div class="price-tag" style="text-align: center;">$20<span style="font-size: 1.2rem; color: #888;">/mo</span></div>
+            <p style="text-align: center; color: #888; margin-bottom: 2rem;">Perfect for simple calculators</p>
+            
+            <ul class="feature-list">
+              <li>Standard calculator template</li>
+              <li>GitHub Pages hosting</li>
+              <li>Mobile responsive design</li>
+              <li>yourname.github.io URL</li>
+              <li>Monthly minor updates</li>
+              <li>Email support</li>
+            </ul>
+            
+            <a href="mailto:kinexventure@protonmail.com?subject=Calculator%20Hosting%20-%20Basic%20Plan" class="btn secondary" style="width: 100%; text-align: center; margin-top: auto;">Get Started</a>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="pricing-card featured" style="position: relative;">
+            <span class="popular-badge">MOST POPULAR</span>
+            <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Pro</h3>
+            <div class="price-tag" style="text-align: center;">$35<span style="font-size: 1.2rem; color: #888;">/mo</span></div>
+            <p style="text-align: center; color: #888; margin-bottom: 2rem;">For businesses needing customization</p>
+            
+            <ul class="feature-list">
+              <li><strong>Everything in Basic, plus:</strong></li>
+              <li>Custom brand colors & logo</li>
+              <li>Lead capture form integration</li>
+              <li>Google Analytics tracking</li>
+              <li>Custom domain (yourdomain.com)</li>
+              <li>Weekly updates & changes</li>
+              <li>Priority email & phone support</li>
+            </ul>
+            
+            <a href="mailto:kinexventure@protonmail.com?subject=Calculator%20Hosting%20-%20Pro%20Plan" class="btn primary" style="width: 100%; text-align: center; margin-top: auto;">Get Started</a>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="pricing-card">
+            <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Enterprise</h3>
+            <div class="price-tag" style="text-align: center;">$75<span style="font-size: 1.2rem; color: #888;">/mo</span></div>
+            <p style="text-align: center; color: #888; margin-bottom: 2rem;">Advanced features & integration</p>
+            
+            <ul class="feature-list">
+              <li><strong>Everything in Pro, plus:</strong></li>
+              <li>Fully custom functionality</li>
+              <li>CRM integration (HubSpot, Salesforce)</li>
+              <li>Email automation integration</li>
+              <li>Advanced analytics dashboard</li>
+              <li>Daily updates available</li>
+              <li>Dedicated phone & Slack support</li>
+            </ul>
+            
+            <a href="mailto:kinexventure@protonmail.com?subject=Calculator%20Hosting%20-%20Enterprise%20Plan" class="btn secondary" style="width: 100%; text-align: center; margin-top: auto;">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfect For Section -->
+      <div style="margin-bottom: 4rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Perfect For</h2>
+        <div class="industry-grid">
+          <div class="industry-item">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">💼</div>
+            <h4 style="color: #00f0ff; margin-bottom: 0.5rem;">Consultants</h4>
+            <p style="color: #888; font-size: 0.9rem;">ROI calculators, pricing tools</p>
+          </div>
+          <div class="industry-item">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏢</div>
+            <h4 style="color: #00f0ff; margin-bottom: 0.5rem;">Service Businesses</h4>
+            <p style="color: #888; font-size: 0.9rem;">Cost estimators, quotes</p>
+          </div>
+          <div class="industry-item">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏗️</div>
+            <h4 style="color: #00f0ff; margin-bottom: 0.5rem;">Contractors</h4>
+            <p style="color: #888; font-size: 0.9rem;">Project cost calculators</p>
+          </div>
+          <div class="industry-item">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏋️</div>
+            <h4 style="color: #00f0ff; margin-bottom: 0.5rem;">Fitness Coaches</h4>
+            <p style="color: #888; font-size: 0.9rem;">Macro & progress trackers</p>
+          </div>
+          <div class="industry-item">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏡</div>
+            <h4 style="color: #00f0ff; margin-bottom: 0.5rem;">Real Estate</h4>
+            <p style="color: #888; font-size: 0.9rem;">Mortgage & ROI calculators</p>
+          </div>
+          <div class="industry-item">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌿</div>
+            <h4 style="color: #00f0ff; margin-bottom: 0.5rem;">Cannabis</h4>
+            <p style="color: #888; font-size: 0.9rem;">Compliance & yield tools</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Us -->
+      <div style="background: rgba(0, 240, 255, 0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(0, 240, 255, 0.2); margin-bottom: 3rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Why Choose Kinex Tech Solutions?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div>
+            <h3 style="color: #00f0ff; margin-bottom: 0.5rem;">⚡ Fast Turnaround</h3>
+            <p style="color: #aaa;">Most calculators ready in 48 hours. Rush service available.</p>
+          </div>
+          <div>
+            <h3 style="color: #00ff88; margin-bottom: 0.5rem;">💰 Close More Sales</h3>
+            <p style="color: #aaa;">Interactive calculators convert 3x better than static content.</p>
+          </div>
+          <div>
+            <h3 style="color: #ffaa00; margin-bottom: 0.5rem;">🛡️ Reliable Infrastructure</h3>
+            <p style="color: #aaa;">99.9% uptime on GitHub Pages. Fast, secure, always available.</p>
+          </div>
+          <div>
+            <h3 style="color: #00f0ff; margin-bottom: 0.5rem;">📱 Mobile-First</h3>
+            <p style="color: #aaa;">70% of users are on mobile. Ours look perfect everywhere.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2 style="margin-bottom: 1rem;">Ready to Get Started?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #ccc; max-width: 700px; margin-left: auto; margin-right: auto;">
+          Join Michigan businesses using professional calculators to close more sales and provide better customer experiences.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:kinexventure@protonmail.com?subject=Calculator%20Hosting%20Inquiry" class="btn primary">📧 Email Us</a>
+          <a href="tel:+13135424207" class="btn secondary">📞 Call (313) 542-4207</a>
+        </div>
+        <p style="margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+          No setup fees • Cancel anytime • Michigan-based support
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kinex Ventures. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+  
+  <script src="main.js"></script>
+</body>
+</html>
